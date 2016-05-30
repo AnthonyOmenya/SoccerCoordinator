@@ -134,27 +134,27 @@ print("****** OKC ********:")
 
 func printLetter () {
 
-print(" ******** HEAT **************")
+print(" \n ******** HEAT **************")
 
 for players in heat {
     
-    print("Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 17, 1 PM, please contact us if you have any questions \n - NBA League")
+    print("\n Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 17, 1 PM, please contact us if you have any questions \n - NBA League")
     
     }
 
-print(" ******** Lakers **************")
+print("\n ******** Lakers **************")
 
 for players in lakers {
     
-    print("Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 17, 3pm, please contact us if you have any questions \n - NBA League")
+    print(" \n Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 17, 3pm, please contact us if you have any questions \n - NBA League")
     
     }
 
-print(" ******** OKC **************")
+print("\n ******** OKC **************")
 
 for players in okc {
     
-    print("Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 18, 1pm, please contact us if you have any questions \n - NBA League")
+    print("\n Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 18, 1pm, please contact us if you have any questions \n - NBA League")
     
     }
 
