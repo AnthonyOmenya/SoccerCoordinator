@@ -2,7 +2,7 @@
 
 import UIKit
 
-// Players data
+// Add Players data
 
 let joeSmith = ["name": "Joe Smith", "height": 42, "experience": true ,"gardian": "Jim and Jan Smith"]
 
@@ -48,42 +48,68 @@ var soccerLeague = [joeSmith, jillTanner, billBon, evaGordon, mattGill, kimmStei
 
 soccerLeague.count
 
+
 // Declaring the Teams
- 
+
 
 var heat   = [[String: AnyObject]]()
 var lakers = [[String: AnyObject]]()
 var okc    = [[String: AnyObject]]()
+var teams = [heat, lakers, okc]
+var noviceList = [[String: AnyObject]] ()
+var proList = [[String: AnyObject]] ()
+var numberOfPlayersForEachTeam = soccerLeague.count / teams.count
 
 // Assign Players in Teams such that the number of experienced players on each team are the same
 
-for player in soccerLeague {
 
-    if heat.count < 6 && player ["experience"] == 0 {
-        heat.append(player)
-        
-        } else if heat.count < 6 && player ["experience"] == 1 {
-            heat.append(player)
-        
-        } else if lakers.count < 5 && player ["experience"] == 0 {
-            lakers.append(player)
-        
-        } else if lakers.count < 6 && player ["experience"] == 1 {
-            lakers.append(player)
-        
-        }  else if okc.count < 6 && player ["experience"] == 1 {
-            okc.append(player)
-        
-        }  else {
-            okc.append(player)
+  // Sort Novice and Pro Players
+
+func createTeams () {
+
     
+    // Sort Novice and Pro Players
     
-    }
+    for player in soccerLeague {
+        if player["experience"] == 0 {
+        noviceList.append (player)
+        } else {
+            proList.append(player)
+
+        }
 
 }
+    // Add Novice Players on each teams
+    
+    for player in noviceList {
+        
+        if heat.count < numberOfPlayersForEachTeam / 2 {
+            heat.append(player)
+        } else if lakers.count < numberOfPlayersForEachTeam / 2 {
+            lakers.append(player)
+        } else if okc.count < numberOfPlayersForEachTeam / 2 {
+            okc.append (player)
+        }
 
-// Displaying Teams
+}
+    // Add Pro Players on each teams
+    
+    for player in proList {
+        if heat.count < numberOfPlayersForEachTeam {
+            heat.append(player)
+        } else if lakers.count < numberOfPlayersForEachTeam {
+            lakers.append(player)
+        } else if okc.count < numberOfPlayersForEachTeam  {
+            okc.append(player)
 
+        }
+
+    }
+ 
+}
+
+// Verify if number of players experience its equal on each team
+/*
 print("****** Heat ********:")
     for h in heat {
     print(h)
@@ -101,8 +127,12 @@ print("****** OKC ********:")
     print(o)
 }
 
+ */
 
 //Generates a personalized letter to the guardians
+
+
+func printLetter () {
 
 print(" ******** HEAT **************")
 
@@ -110,7 +140,7 @@ for players in heat {
     
     print("Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 17, 1 PM, please contact us if you have any questions \n - NBA League")
     
-}
+    }
 
 print(" ******** Lakers **************")
 
@@ -118,7 +148,7 @@ for players in lakers {
     
     print("Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 17, 3pm, please contact us if you have any questions \n - NBA League")
     
-}
+    }
 
 print(" ******** OKC **************")
 
@@ -126,7 +156,15 @@ for players in okc {
     
     print("Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 18, 1pm, please contact us if you have any questions \n - NBA League")
     
+    }
+
 }
 
-// Done
+
+// Activate the created function
+
+createTeams()
+printLetter()
+
+
 
