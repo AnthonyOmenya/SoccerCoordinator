@@ -49,6 +49,7 @@ var soccerLeague = [joeSmith, jillTanner, billBon, evaGordon, mattGill, kimmStei
 soccerLeague.count
 
 // Declaring the Teams
+ 
 
 var heat   = [[String: AnyObject]]()
 var lakers = [[String: AnyObject]]()
@@ -101,7 +102,30 @@ print("****** OKC ********:")
 }
 
 
+//Generates a personalized letter to the guardians
 
+print(" ******** HEAT **************")
 
+for players in heat {
+    
+    print("Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 17, 1 PM, please contact us if you have any questions \n - NBA League")
+    
+}
+
+print(" ******** Lakers **************")
+
+for players in lakers {
+    
+    print("Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 17, 3pm, please contact us if you have any questions \n - NBA League")
+    
+}
+
+print(" ******** OKC **************")
+
+for players in okc {
+    
+    print("Dear \(players["gardian"]!), \n  \(players["gardian"]!) has been selected for the Heat Team!, first practice will be on March 18, 1pm, please contact us if you have any questions \n - NBA League")
+    
+}
 
 
