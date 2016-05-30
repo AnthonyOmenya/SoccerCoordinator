@@ -90,15 +90,16 @@ print("****** Heat ********:")
 
 
 print("****** Lakers ********:")
-for l in lakers {
+    for l in lakers {
     print(l)
 }
 
 
 print("****** OKC ********:")
-for o in okc {
+    for o in okc {
     print(o)
 }
+
 
 
 
