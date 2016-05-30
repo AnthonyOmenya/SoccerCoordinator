@@ -4,7 +4,7 @@ import UIKit
 
 // Players data
 
-let joeSmith = ["name": "Joe Smith", "height": 42, "experince": true ,"guardian": "Jim and Jan Smith"]
+let joeSmith = ["name": "Joe Smith", "height": 42, "experience": true ,"gardian": "Jim and Jan Smith"]
 
 let jillTanner = ["name":"Jill Tanner","heigth": 36, "experience": true, "gardian": "Clara Tanner"]
 
@@ -36,9 +36,69 @@ let arnoldWillis = ["name": "Arnold Willis" , "height": 43, "experience": false,
 
 let phillipHelm = ["name": "Phillip Helm", "height": 43, "experience": true, "gardian": "Thomas Helm and Eva Jones"]
 
-let lesClay = ["name": "Les Clay", "height": 42, "experience": true, "gradian": "Wynonna Brown"]
+let lesClay = ["name": "Les Clay", "height": 42, "experience": true, "gardian": "Wynonna Brown"]
 
-let herschelKrustofski = ["name": "Herschel Krustofski", "height": 45, "gardia": "Hyman and Rachel Krustofski"]
+let herschelKrustofski = ["name": "Herschel Krustofski", "height": 45, "experience": true, "gardian": "Hyman and Rachel Krustofski"]
+
+// Players in soccer league
+
+var soccerLeague = [joeSmith, jillTanner, billBon, evaGordon, mattGill, kimmStein, sammyAdams, karlSaygan, suzaneGreenberg, salDali, joeKavalier, benFinkelstein, diegoSoto, choleAlaska, arnoldWillis, phillipHelm, lesClay, herschelKrustofski]
+
+// Count the number of players ( Must be 18)
+
+soccerLeague.count
+
+// Declaring the Teams
+
+var heat   = [[String: AnyObject]]()
+var lakers = [[String: AnyObject]]()
+var okc    = [[String: AnyObject]]()
+
+// Assign Players in Teams such that the number of experienced players on each team are the same
+
+for player in soccerLeague {
+
+    if heat.count < 6 && player ["experience"] == 0 {
+        heat.append(player)
+        
+        } else if heat.count < 6 && player ["experience"] == 1 {
+            heat.append(player)
+        
+        } else if lakers.count < 5 && player ["experience"] == 0 {
+            lakers.append(player)
+        
+        } else if lakers.count < 6 && player ["experience"] == 1 {
+            lakers.append(player)
+        
+        }  else if okc.count < 6 && player ["experience"] == 1 {
+            okc.append(player)
+        
+        }  else {
+            okc.append(player)
+    
+    
+    }
+
+}
+
+// Displaying Teams
+
+print("****** Heat ********:")
+    for h in heat {
+    print(h)
+}
+
+
+print("****** Lakers ********:")
+for l in lakers {
+    print(l)
+}
+
+
+print("****** OKC ********:")
+for o in okc {
+    print(o)
+}
 
 
 
